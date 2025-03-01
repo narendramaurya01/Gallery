@@ -14,8 +14,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the application code
 COPY . /app/
-RUN python ./app/manage.py makemigrations
-RUN python ./app/manage.py migrate
+RUN ls
 # Expose the application port
 EXPOSE 8080
 
