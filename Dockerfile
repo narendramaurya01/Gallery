@@ -11,10 +11,10 @@ WORKDIR /app
 # Install dependencies
 COPY requirements.txt /app/
 RUN pip install --no-cache-dir -r requirements.txt
-RUN python manage.py makemigrations && python manage.py migrate
+
 # Copy the application code
 COPY . /app/
-
+RUN python manage.py makemigrations && python manage.py migrate
 # Expose the application port
 EXPOSE 8080
 
