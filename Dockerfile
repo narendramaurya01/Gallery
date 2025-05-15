@@ -25,8 +25,6 @@ COPY . /app/
 # Collect static files (optional, but common in production)
 RUN python manage.py collectstatic --noinput
 
-# Run migrations
-RUN python manage.py makemigrations && python manage.py migrate
 
 # Expose the port the app runs on
 EXPOSE 8080
